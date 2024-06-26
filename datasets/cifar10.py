@@ -27,6 +27,7 @@ def main():
 
         print("downloading...")
         with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_dir = "./CIFAR10"
             dataset = torchvision.datasets.CIFAR10(
                 root=tmp_dir, train=split == "train", download=True
             )
